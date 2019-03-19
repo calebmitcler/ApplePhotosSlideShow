@@ -11,7 +11,7 @@ extension ProjectModel {
     func store(in extensionContext: PHProjectExtensionContext, completion: @escaping (Bool, Error?) -> Void) {
         var data = Data()
         do {
-            data = try NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true)
+            data = try NSKeyedArchiver.archivedData(withRootObject: self)
         } catch {
             completion(false, error)
             return

@@ -84,14 +84,8 @@ class PhotoProjectViewController: NSViewController, PHProjectExtensionController
             let changeDetails = changeInstance.changeDetails(for: fetchResult) as? PHFetchResultChangeDetails<PHAsset>
             else { return }
         projectAssets = changeDetails.fetchResultAfterChanges
+        print("changeee")
 
-        guard let projectExtensionContext = projectExtensionContext else { return }
-        projectExtensionContext.updatedProjectInfo(from: projectModel?.projectInfo) { (updatedProjectInfo) in
-            guard let projectInfo = updatedProjectInfo else { return }
-            DispatchQueue.main.async {
-                self.setupProjectModel(with: projectInfo, extensionContext: projectExtensionContext)
-            }
-        }
     }
 
     // MARK: -

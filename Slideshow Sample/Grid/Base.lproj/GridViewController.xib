@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.10" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,16 +16,17 @@
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="1">
             <rect key="frame" x="0.0" y="0.0" width="387" height="286"/>
             <subviews>
-                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-43-RS0">
-                    <rect key="frame" x="0.0" y="0.0" width="387" height="249"/>
-                    <clipView key="contentView" id="IUG-CU-E15">
-                        <rect key="frame" x="1" y="1" width="385" height="247"/>
+                <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6R-43-RS0">
+                    <rect key="frame" x="0.0" y="0.0" width="387" height="61"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <clipView key="contentView" ambiguous="YES" id="IUG-CU-E15">
+                        <rect key="frame" x="1" y="1" width="385" height="59"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="ERI-Hk-AcQ">
-                                <rect key="frame" x="0.0" y="0.0" width="385" height="247"/>
+                            <collectionView ambiguous="YES" id="ERI-Hk-AcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="385" height="59"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="79I-Nx-SQo">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="79I-Nx-SQo">
                                     <size key="itemSize" width="100" height="100"/>
                                     <edgeInsets key="sectionInset" left="20" right="20" top="20" bottom="20"/>
                                 </collectionViewFlowLayout>
@@ -39,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="iwb-4I-xVE">
-                        <rect key="frame" x="370" y="1" width="16" height="247"/>
+                        <rect key="frame" x="-100" y="-100" width="16" height="244"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -58,12 +59,8 @@ DQ
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="N6R-43-RS0" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Jmw-NK-wUs"/>
                 <constraint firstAttribute="trailing" secondItem="HXJ-3Z-xeS" secondAttribute="trailing" constant="20" id="Lxn-Dy-kkh"/>
                 <constraint firstItem="HXJ-3Z-xeS" firstAttribute="top" secondItem="1" secondAttribute="top" constant="8" id="dF3-b4-QVN"/>
-                <constraint firstAttribute="trailing" secondItem="N6R-43-RS0" secondAttribute="trailing" id="djz-eG-zzJ"/>
-                <constraint firstAttribute="bottom" secondItem="N6R-43-RS0" secondAttribute="bottom" id="emg-Pb-xlZ"/>
-                <constraint firstItem="N6R-43-RS0" firstAttribute="top" secondItem="HXJ-3Z-xeS" secondAttribute="bottom" constant="8" id="l0L-uw-Uit"/>
             </constraints>
             <point key="canvasLocation" x="138.5" y="211"/>
         </customView>
